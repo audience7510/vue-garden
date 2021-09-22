@@ -68,6 +68,28 @@ export const constantRouterMap = [
   },
 
   {
+    path: '/subject',
+    component: Layout,
+    redirect: '/subject/list',
+    name: '装备分类管理',
+    meta: { title: '装备分类管理', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: '装备分类列表',
+        component: () => import('@/views/lol/subject/list'),
+        meta: { title: '装备分类列表', icon: 'table' }
+      },
+      {
+        path: 'save',
+        name: '添加装备分类',
+        component: () => import('@/views/lol/subject/save'),
+        meta: { title: '添加装备分类', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
     path: '/example',
     component: Layout,
     redirect: '/example/table',
