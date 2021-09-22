@@ -50,14 +50,14 @@
         />
       <el-table-column prop="userName" label="名称" width="160" align="center"/>
 
-      <el-table-column prop="age" label="年龄" width="160" align="center"/>
+      <el-table-column prop="age" label="年龄" width="100" align="center"/>
 
       <el-table-column prop="nickName" label="昵称" width="160" align="center"/>
 
-      <el-table-column prop="avatar" label="头像" align="center">
+      <el-table-column prop="avatar" label="头像" width="160" align="center">
         <template slot-scope="scope">
         <img
-        style="width: 90px; height: 90px"
+        style="width: 100px; height: 100px"
         :src="scope.row.avatar">
         </template>
       </el-table-column>
