@@ -48,11 +48,11 @@
         align="center"
         type = "index"
         />
-      <el-table-column prop="userName" label="名称" width="160" />
+      <el-table-column prop="userName" label="名称" width="160" align="center"/>
 
-      <el-table-column prop="age" label="年龄" width="160"/>
+      <el-table-column prop="age" label="年龄" width="160" align="center"/>
 
-      <el-table-column prop="nickName" label="昵称" width="160"/>
+      <el-table-column prop="nickName" label="昵称" width="160" align="center"/>
 
       <el-table-column prop="avatar" label="头像" align="center">
         <template slot-scope="scope">
