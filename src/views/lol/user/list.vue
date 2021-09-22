@@ -57,14 +57,14 @@
       <el-table-column prop="avatar" label="头像" align="center">
         <template slot-scope="scope">
         <img
-        style="width: 100px; height: 100px"
+        style="width: 90px; height: 90px"
         :src="scope.row.avatar">
         </template>
       </el-table-column>
       
-      <el-table-column prop="createTime" label="创建时间" width="260"/>
+      <el-table-column prop="createTime" label="创建时间" width="160" align="center"/>
 
-      <el-table-column prop="description" label="简介" width="260"/>
+      <el-table-column prop="description" label="简介" width="260" align="center"/>
 
       <el-table-column label="操作" width="200" align="center">
         <template slot-scope="scope">
