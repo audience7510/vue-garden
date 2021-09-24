@@ -42,26 +42,26 @@ export const constantRouterMap = [
     path: '/user',
     component: Layout,
     redirect: '/user/table',
-    name: '英雄管理',
-    meta: { title: '英雄管理', icon: 'example' },
+    name: '用户管理',
+    meta: { title: '用户管理', icon: 'example' },
     children: [
       {
         path: 'table',
-        name: '英雄列表',
+        name: '用户列表',
         component: () => import('@/views/lol/user/list'),
-        meta: { title: '英雄列表', icon: 'table' }
+        meta: { title: '用户列表', icon: 'table' }
       },
       {
         path: 'save',
-        name: '添加英雄',
+        name: '添加用户',
         component: () => import('@/views/lol/user/save'),
-        meta: { title: '添加英雄', icon: 'tree' }
+        meta: { title: '添加用户', icon: 'tree' }
       },
       {
         path: 'edit/:id',
-        name: '编辑英雄',
+        name: '编辑用户',
         component: () => import('@/views/lol/user/save'),
-        meta: { title: '编辑英雄', noCache: true },
+        meta: { title: '编辑用户', noCache: true },
         hidden: true
       }
     ]
@@ -71,20 +71,63 @@ export const constantRouterMap = [
     path: '/subject',
     component: Layout,
     redirect: '/subject/list',
-    name: '装备分类管理',
-    meta: { title: '装备分类管理', icon: 'example' },
+    name: '影视分类管理',
+    meta: { title: '影视分类管理', icon: 'example' },
     children: [
       {
         path: 'list',
-        name: '装备分类列表',
+        name: '影视分类列表',
         component: () => import('@/views/lol/subject/list'),
-        meta: { title: '装备分类列表', icon: 'table' }
+        meta: { title: '影视分类列表', icon: 'table' }
       },
       {
         path: 'save',
-        name: '添加装备分类',
+        name: '添加影视分类',
         component: () => import('@/views/lol/subject/save'),
-        meta: { title: '添加装备分类', icon: 'tree' }
+        meta: { title: '添加影视分类', icon: 'tree' }
+      }
+    ]
+  },
+
+  {
+    path: '/movie',
+    component: Layout,
+    redirect: '/movie/list',
+    name: '影视管理',
+    meta: { title: '影视管理', icon: 'example' },
+    children: [
+      {
+        path: 'list',
+        name: '影视列表',
+        component: () => import('@/views/lol/movie/list'),
+        meta: { title: '影视列表', icon: 'table' }
+      },
+      {
+        path: 'info',
+        name: '添加影视',
+        component: () => import('@/views/lol/movie/info'),
+        meta: { title: '添加影视', icon: 'tree' }
+      },
+      {
+        path: 'info/:id',
+        name: 'InfoEdit',
+        component: () => import('@/views/lol/movie/info'),
+        meta: { title: '编辑影视基本信息', noCache: true },
+        hidden: true
+      },
+      {
+        path: 'chapter/:id',
+        name: 'ChapterEdit',
+        component: () => import('@/views/lol/movie/chapter'),
+        meta: { title: '编辑影视大纲', noCache: true },
+        hidden: true
+      },
+      {
+        path: 'publish/:id',
+        name: 'PublishEdit',
+        component: () => import('@/views/lol/movie/publish'),
+        meta: { title: '发布影视', noCache: true },
+        hidden: true
       }
     ]
   },
