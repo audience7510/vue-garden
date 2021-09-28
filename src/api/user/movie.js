@@ -30,5 +30,19 @@ export default{
             method: 'post',
             data: movieInfo
             })
-    }
+    },
+    //影视确认信息显示
+    getPublihInfo(id) {
+        return request({
+            url: '/hero/movie/getPublishVo/'+id,
+            method: 'get'
+            })
+    },
+    //影视最终发布
+    publihMovie(id) {
+        return request({
+            url: '/hero/movie/publishMovie/'+id,
+            method: 'post'
+            })
+    },
 }
