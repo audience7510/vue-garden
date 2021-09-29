@@ -45,4 +45,12 @@ export default{
             method: 'post'
             })
     },
+    //查询影视列表
+    getListMovie(current,size,movieQuery) {
+        return request({
+            url: `/hero/movie/list/${current}/${size}`,
+            method: 'post',
+            data: movieQuery
+          })
+    }
 }
