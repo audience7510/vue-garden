@@ -132,7 +132,27 @@ export default {
             this.movieQuery = {}
             //查询所有讲师数据
             this.getList()
-        }
+        },
+
+        removeDataById(id){
+        this.$confirm('此操作将删除影视所有信息, 是否继续?', '提示', {
+                confirmButtonText: '确定',
+                cancelButtonText: '取消',
+                type: 'warning'
+            }).then(() => {  //点击确定，执行then方法
+                //调用删除的方法
+                movie.deleteMovieId(id)
+                    .then(response =>{//删除成功
+                    //提示信息
+                    this.$message({
+                        type: 'success',
+                        message: '删除成功!'
+                    });
+                    //回到列表页面
+                    this.getList()
+                })
+            }) //点击取消，执行catch方法
+    }
  
     }
 }

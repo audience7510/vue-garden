@@ -52,5 +52,12 @@ export default{
             method: 'post',
             data: movieQuery
           })
-    }
+    },
+    //删除影视
+    deleteMovieId(id) {
+        return request({
+            url: `/hero/movie/delete/${id}`,
+            method: 'delete',
+          })
+    },
 }
